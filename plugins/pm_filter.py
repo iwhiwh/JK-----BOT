@@ -1410,19 +1410,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif data.startswith("generate_stream_link"):
-        _, file_id = data.split(":")
+    elif query.data.startswith("generate_stream_link"):
+        _, file_id = query.data.split(":")
         try:
             user_id = query.from_user.id
             username =  query.from_user.mention 
 
-#            log_msg = await client.send_cached_media(
-#                chat_id=LOG_CHANNEL,
-#                file_id=file_id,
-#            )
+            log_msg = await client.send_cached_media(
+                chat_id=LOG_CHANNEL,
+                file_id=file_id,
+            )
             fileName = {quote_plus(get_name(log_msg))}
-            lazy_stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-            lazy_download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+            lazy_stream = url=await get_shortlink(query.message.chat.id, f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
+            lazy_download = url=await get_shortlink(query.message.chat.id, f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}")
 
             xo = await query.message.reply_text(f'🔐')
             await asyncio.sleep(1)
@@ -1432,20 +1432,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("web Download", url=lazy_download),  # we download Link
-                                                    InlineKeyboardButton('▶Stream online', url=lazy_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙", url=lazy_download),  # we download Link
+                                                    InlineKeyboardButton('𝙊𝙣𝙡𝙞𝙣𝙚 𝙎𝙩𝙧𝙚𝙖𝙢', url=lazy_stream)]])  # web stream Link
             )
-            await query.message.reply_video( 
-                 video=(STREAM_VID), caption=(STREAM_CAP)), 
-                 quote=True, 
- #                disable_web_page_preview=True, 
-                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 📥", url=lazy_download),  # we download Link 
-                                                     InlineKeyboardButton('📺 𝙊𝙣𝙡𝙞𝙣𝙚 𝙎𝙩𝙧𝙚𝙖𝙢 📺', url=lazy_stream)]]),  # web stream Link 
-                 parse_mode=enums.ParseMode.HTML 
+            await query.message.reply_video(
+                video=('https://telegra.ph/file/f7f2a532fe4b990044507.mp4'), caption="════════※ ·❆· ※════════\n      📺𝙋𝙡𝙖𝙮 𝗦𝘂𝗽𝗽𝗼𝗿𝘁📺\n\n‣ 𝘔𝘹 𝘗𝘭𝘢𝘺𝘦𝘳   ‣ 𝘗𝘭𝘢𝘺-𝘪𝘵\n\n‣ 𝘝𝘓𝘊 𝘗𝘭𝘢𝘺𝘦𝘳  ‣ 𝘚 𝘗𝘭𝘢𝘺𝘦𝘳\n\n‣ 𝘒𝘔 𝘗𝘭𝘢𝘺𝘦𝘳  ‣ 𝘏𝘋 𝘗𝘭𝘢𝘺𝘦𝘳 (4𝘒)",
+                quote=True,
+#                disable_web_page_preview=True,
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 📥", url=lazy_download),  # we download Link
+                                                    InlineKeyboardButton('📺 𝙊𝙣𝙡𝙞𝙣𝙚 𝙎𝙩𝙧𝙚𝙖𝙢 📺', url=lazy_stream)]]),  # web stream Link
+                parse_mode=enums.ParseMode.HTML
             )
         except Exception as e:
             print(e)  # print the error message
-            await query.answer(f"something went wrong \n\n{e}", show_alert=True)
+            await query.answer(f"☣something went wrong sweetheart\n\n{e}", show_alert=True)
             return
 
     elif query.data == "coct":
