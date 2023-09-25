@@ -1444,6 +1444,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                                     ]]),  # web stream Link
                 parse_mode=enums.ParseMode.HTML
     )
+         except Exception as e:
+            print(e)  # print the error message
+            await query.answer(f"something went wrong \n\n{e}", show_alert=True)
+            return
 
     elif query.data == "coct":
         buttons = [[
