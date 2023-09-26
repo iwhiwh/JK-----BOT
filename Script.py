@@ -7,7 +7,7 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
     ABOUT_TXT = """<b>
 ‣ ᴍʏ ɴᴀᴍᴇ : {}
-‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/jk1boss'>𒆜𓆩Jᴋ Dᴇᴠᴇʟᴏᴘᴇʀ𓆩​</a>
+‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/mindsboss'>𒆜𓆩Jᴋ Dᴇᴠᴇʟᴏᴘᴇʀ𓆩​</a>
 ‣ ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a>
 ‣ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a>
 ‣ ᴅᴀᴛᴀ ʙᴀsᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a>
@@ -243,18 +243,6 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 ⏰ Tɪᴍᴇ : <code>{}</code>
 🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code>
 🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v2.7.1 [ Sᴛᴀʙʟᴇ ]</code></b>"""
-
-STREAM_CAP = """
-════════※ ·❆· ※════════
-  𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗜𝗻 𝗔𝗹𝗹 𝗕𝗿𝗼𝘄𝘀𝗲𝗿𝘀
-        𝗣𝗹𝗮𝘆 𝗔𝗽𝗽𝘀
-
-  ‣ 𝘔𝘹 𝘗𝘭𝘢𝘺𝘦𝘳   ‣ 𝘗𝘭𝘢𝘺-𝘪𝘵
-
-  ‣ 𝘝𝘓𝘊 𝘗𝘭𝘢𝘺𝘦𝘳  ‣ 𝘚 𝘗𝘭𝘢𝘺𝘦𝘳
-
-  ‣ 𝘒𝘔 𝘗𝘭𝘢𝘺𝘦𝘳  ‣ 𝘝𝘪𝘥𝘦𝘰 𝘗𝘭𝘢𝘺𝘦𝘳
-"""
 
     LOGO = """
 
