@@ -85,8 +85,8 @@ LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin
 SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "season 6" , "season 7" , "season 8" , "season 9" , "season 10"]
 
 #Stream Features Veriables
-STREAM_VID = ["STREAM_VID", ""]
-STREAM_CAP = ["STREAM_CAP", ""]
+STREAM_PIC = environ.get("https://graph.org/file/8fffa25a983f787b808e1.jpg")
+STREAM_CAP = environ.get(f"{script.STREAM_CAP}")
 
 PORT = int(environ.get('PORT', 8080))
 NO_PORT = bool(environ.get('NO_PORT', False))
