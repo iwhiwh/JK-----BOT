@@ -86,7 +86,7 @@ SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "seas
 
 #Stream Features Veriables
 STREAM_PIC = environ.get('STREAM_PIC', "https://graph.org/file/8fffa25a983f787b808e1.jpg")
-#STREAM_CAP = environ.get("STREAM_CAP", f"{script.STREAM_CAP}")
+STREAM_CAP = environ.get("STREAM_CAP", f"{script.STREAM_CAP}")
 
 PORT = int(environ.get('PORT', 8080))
 NO_PORT = bool(environ.get('NO_PORT', False))
