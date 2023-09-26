@@ -1437,7 +1437,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                                     InlineKeyboardButton('Oɴʟɪɴᴇ Sᴛʀᴇᴀᴍ ▶️', url=lazy_stream)]])  # web stream Link
             )
             await query.message.reply_photo(
-                photo=('https://graph.org/file/8fffa25a983f787b808e1.jpg"'), caption=(),
+                photo=('https://graph.org/file/8fffa25a983f787b808e1.jpg"'), caption=('════════※ ·❆· ※════════\n  𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗜𝗻 𝗔𝗹𝗹 𝗕𝗿𝗼𝘄𝘀𝗲𝗿𝘀\n           𝗣𝗹𝗮𝘆 𝗔𝗽𝗽𝘀\n\n  ‣ 𝘔𝘹 𝘗𝘭𝘢𝘺𝘦𝘳   ‣ 𝘗𝘭𝘢𝘺-𝘪𝘵\n\n  ‣ 𝘝𝘓𝘊 𝘗𝘭𝘢𝘺𝘦𝘳  ‣ 𝘚 𝘗𝘭𝘢𝘺𝘦𝘳\n\n  ‣ 𝘒𝘔 𝘗𝘭𝘢𝘺𝘦𝘳  ‣ 𝘝𝘪𝘥𝘦𝘰 𝘗𝘭𝘢𝘺𝘦𝘳'),
                 quote=True,
 #                disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Fᴀꜱᴛ Dᴏᴡɴʟᴏᴀᴅ 📥", url=lazy_download),  # we download Link
