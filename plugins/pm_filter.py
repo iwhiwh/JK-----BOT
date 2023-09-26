@@ -259,7 +259,7 @@ async def advantage_spoll_choker(bot, query):
                 if NO_RESULTS_MSG:
                     await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
                 k = await query.message.edit(script.MVE_NT_FND)
-                await asyncio.sleep(10)
+                await asyncio.sleep(86400)
                 await k.delete()
 
 #languages
@@ -1672,7 +1672,7 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await message.reply_sticker(f"CAACAgIAAxkBAAEHH7dlEuEfd7LaO2Z0LeDTHvApj3RzjwACdxgAAqPjKEmMVSFmXGLogR4E",
+            m=await message.reply_sticker(sticker="CAACAgIAAxkBAAEHH7dlEuEfd7LaO2Z0LeDTHvApj3RzjwACdxgAAqPjKEmMVSFmXGLogR4E",
             reply_markup=InlineKeyboardMarkup(
                        [
                         [
@@ -1709,7 +1709,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_sticker(f"CAACAgIAAxkBAAEHH7dlEuEfd7LaO2Z0LeDTHvApj3RzjwACdxgAAqPjKEmMVSFmXGLogR4E",
+        m=await message.reply_sticker(sticker="CAACAgIAAxkBAAEHH7dlEuEfd7LaO2Z0LeDTHvApj3RzjwACdxgAAqPjKEmMVSFmXGLogR4E",
         reply_markup=InlineKeyboardMarkup(
                        [
                         [
