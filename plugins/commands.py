@@ -336,29 +336,29 @@ async def start(client, message):
 #        for x in filesarr:
 #            await x.delete()
 #        await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
-#        return    
+        return    
         
-#    elif data.startswith("files"):
-#        user = message.from_user.id
-#        if temp.SHORT.get(user)==None:
-#            await message.reply_text(text="<b>Please Search Again in Group</b>")
-#        else:
-#            chat_id = temp.SHORT.get(user)
-#        settings = await get_settings(chat_id)
-#        if settings['is_shortlink'] and user not in PREMIUM_USER:
-#            files_ = await get_file_details(file_id)
-#            files = files_[0]
-#            g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-#            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i></b>", reply_markup=InlineKeyboardMarkup(
-#                    [
-#                        [
-#                            InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
-#                        ], [
-#                            InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
-#                        ]
-#                    ]
-#                )
-#            )
+    elif data.startswith("files"):
+        user = message.from_user.id
+        if temp.SHORT.get(user)==None:
+            await message.reply_text(text="<b>Please Search Again in Group</b>")
+        else:
+            chat_id = temp.SHORT.get(user)
+        settings = await get_settings(chat_id)
+        if settings['is_shortlink'] and user not in PREMIUM_USER:
+            files_ = await get_file_details(file_id)
+            files = files_[0]
+            g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
+            k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i></b>", reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=g)
+                        ], [
+                            InlineKeyboardButton('⁉️ Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ ⁉️', url=await get_tutorial(chat_id))
+                        ]
+                    ]
+                )
+            )
 #            await asyncio.sleep(1200)
 #            await k.edit("<b>Your message is successfully deleted!!!</b>")
             return
