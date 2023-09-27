@@ -120,7 +120,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('}') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", url=f"https://telegram.me/{temp.U_NAME}?start=files_{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('}') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", url=f"https://telegram.me/{temp.U_NAME}?start=files{file.file_id}'
                 ),
             ]
             for file in files
