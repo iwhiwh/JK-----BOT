@@ -34,17 +34,17 @@
             "description": "Username or ID of channel or group. Separate multiple IDs by space.",
             "required": false
         },
-        "ADMINS": {
+        "PORT": {
             "description": "Username or ID of Admin. Separate multiple Admins by space.",
-            "required": true
+            "required": fasle
         },
-        "PICS": {
+        "FQDN": {
             "description": "Add some telegraph link of pictures .",
             "required": false
         },
         "LOG_CHANNEL": {
             "description": "Bot Logs,Give a channel id with -100xxxxxxx",
-            "required": true
+            "required": false
         },
         "AUTH_USERS": {
             "description": "Username or ID of users to give access of inline search. Separate multiple users by space.\nLeave it empty if you don't want to restrict bot usage.",
